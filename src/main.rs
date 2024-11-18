@@ -219,9 +219,11 @@ fn test_comparison_operator() {
 #[test]
 fn test_boolean_operator() {
     let quiz_score: i8 = 90;
-    let eval_score: i8 = 70;
+    let eval_score: i8 = 80;
     let am_i_passed: bool = (quiz_score >= 75 && quiz_score <= 100)
                                 && (eval_score >= 75 && eval_score <= 100);
-
     println!("am i passed the test and eval? {}", am_i_passed);
+
+    let is_remedial_test_eligible: bool = !am_i_passed;
+    println!("should i take the remedial test? {}", is_remedial_test_eligible);
 }
