@@ -115,3 +115,12 @@ fn test_define_float() {
     println!("x is {}", x);
     println!("y is {}", y);
 }
+
+#[test]
+fn test_define_bool() {
+    let am_i_human = true;
+    println!("am i human? {}", am_i_human);
+
+    let am_i_tired: bool = false;
+    println!("am i tired? {}", am_i_tired);
+}
