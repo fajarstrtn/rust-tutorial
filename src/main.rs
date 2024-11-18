@@ -65,3 +65,37 @@ fn test_print_format() {
 /*  println!(name); will cause an error: "format argument must be a string literal" */
     println!("{}", name);
 }
+
+
+#[test]
+fn test_define_integer() {
+    let u8_min: u8 = u8::MIN;
+    let u8_max: u8 = u8::MAX;
+    println!("u8_min is {}", u8_min);
+    println!("u8_max is {}", u8_max);
+
+    let i8_min = i8::MIN;
+    let i8_max = i8::MAX;
+    println!("i8_min is {}", i8_min);
+    println!("i8_max is {}", i8_max);
+
+/*  rust will automatically detect for integer (i32) */
+    let x: i32 = 100;
+    let y = 100;
+
+    println!("x is {}", x);
+    println!("y is {}", y);
+
+/*  below statements will cause an error: "attempt to add with overflow"
+    because rust prevents it from overflow
+
+    let mut x = i32::MAX;
+    x = x + 1;
+    println!("x is {}", x); */
+
+    /* below statements also will cause an error: "attempt to subtract with overflow"
+
+    let mut y = i32::MIN;
+    y -= 1;
+    println!("y is {}", y); */
+}
