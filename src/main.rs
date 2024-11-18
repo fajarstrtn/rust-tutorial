@@ -197,3 +197,21 @@ fn test_augmented_operator() {
     a -= 10;
     println!("{}", a);
 }
+
+#[test]
+fn test_comparison_operator() {
+    let a: u16 = 60000;
+    let b: i16 = 32000;
+
+/*  println!("is a bigger than b? {}", a > b); will cause an error: mismatched types, expected 'u16'
+    found 'i16; */
+
+    let c: u16 = b as u16;
+    
+    println!("is {} bigger than {}? {}", a, c, a > c);
+    println!("is {} less than {}? {}", a, c, a < c);
+    println!("is {} bigger or equal than {}? {}", a, c, a >= c);
+    println!("is {} less or equal than {}? {}", a, c, a <= c);
+    println!("is {} equal than {}? {}", a, c, a == c);
+    println!("is {} not equal than {}? {}", a, c, a != c);
+}
