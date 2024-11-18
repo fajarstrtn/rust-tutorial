@@ -185,3 +185,15 @@ fn test_operator() {
     println!("{}", a * b);
     println!("{}", a % b);
 }
+
+#[test]
+fn test_augmented_operator() {
+    let mut a: i8 = 10;
+
+/*  when using augmented operator, make sure that the variable has been defined as 'mut'. */
+    a += 10;
+    println!("{}", a);
+
+    a -= 10;
+    println!("{}", a);
+}
