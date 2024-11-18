@@ -130,3 +130,12 @@ fn test_define_char() {
     let new_char: char = 'a';
     println!("{}", new_char);
 }
+
+#[test]
+fn test_define_string() {
+    let name = "jack morris";
+    println!("my name is {}", name);
+
+    let city: &str = "jakarta";
+    println!("i lived in {}", city);
+}
