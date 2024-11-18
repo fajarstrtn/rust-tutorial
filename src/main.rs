@@ -215,3 +215,13 @@ fn test_comparison_operator() {
     println!("is {} equal than {}? {}", a, c, a == c);
     println!("is {} not equal than {}? {}", a, c, a != c);
 }
+
+#[test]
+fn test_boolean_operator() {
+    let quiz_score: i8 = 90;
+    let eval_score: i8 = 70;
+    let am_i_passed: bool = (quiz_score >= 75 && quiz_score <= 100)
+                                && (eval_score >= 75 && eval_score <= 100);
+
+    println!("am i passed the test and eval? {}", am_i_passed);
+}
