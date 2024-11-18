@@ -174,6 +174,8 @@ fn test_define_tuple() {
     println!("1st index is {}", tpl.0);
     println!("2nd index is {}", tpl.1);
     println!("3rd index is {}", tpl.2);
+
+    println!("the tuple values are {:?}", tpl);
 }
 
 #[test]
