@@ -30,3 +30,16 @@ fn test_create_mutable_variable() {
     x = 100;
     println!("x is {}", x);
 }
+
+#[test]
+fn test_check_variable() {
+    let name = "john doe";
+/*  name = 10; will cause an error: "mismatched types" */
+    println!("this is {}", name);
+
+    /* let mut occupation = "software engineer";
+    println!("his job is a {}", occupation);
+
+    piece of code above will give you only warning: "variable does not need to be mutable"
+    but it succeeds when running unit tests */
+}
