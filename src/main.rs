@@ -58,3 +58,10 @@ fn test_shadowing() {
 /*  rust allows users to use shadowing variable but it is not a good practice
     and causing confusion */
 }
+
+#[test]
+fn test_print_format() {
+    let name = "john doe";
+/*  println!(name); will cause an error: "format argument must be a string literal" */
+    println!("{}", name);
+}
