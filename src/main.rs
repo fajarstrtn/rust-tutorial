@@ -99,3 +99,19 @@ fn test_define_integer() {
     y -= 1;
     println!("y is {}", y); */
 }
+
+#[test]
+fn test_define_float() {
+    let weight: f32 = 987.1234;
+    println!("{}", weight);
+
+    let pi: f64 = 3.141592653589793238462643383279502884197;
+    println!("{}", pi);
+
+/*  rust will automatically detect for float (f64) */
+    let x: f64 = 9.18279172912;
+    let y = 10.21982912;
+
+    println!("x is {}", x);
+    println!("y is {}", y);
+}
