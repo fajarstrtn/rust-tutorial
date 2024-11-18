@@ -170,10 +170,10 @@ fn test_convert_integer_using_as() {
 
 #[test]
 fn test_define_tuple() {
-let tpl: (i8, bool, char) = (8, true, 'x');
-println!("1st index is {}", tpl.0);
-println!("2nd index is {}", tpl.1);
-println!("3rd index is {}", tpl.2);
+    let tpl: (i8, bool, char) = (8, true, 'x');
+    println!("1st index is {}", tpl.0);
+    println!("2nd index is {}", tpl.1);
+    println!("3rd index is {}", tpl.2);
 }
 
 #[test]
