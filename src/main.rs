@@ -139,3 +139,12 @@ fn test_define_string() {
     let city: &str = "jakarta";
     println!("i lived in {}", city);
 }
+
+#[test]
+fn test_copy_variable() {
+    let a: i8 = 10;
+    let b: i8 = a;
+
+    println!("a is {}", a);
+    println!("b is {}", b);
+}
