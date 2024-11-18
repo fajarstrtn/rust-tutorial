@@ -124,3 +124,9 @@ fn test_define_bool() {
     let am_i_tired: bool = false;
     println!("am i tired? {}", am_i_tired);
 }
+
+#[test]
+fn test_define_char() {
+    let new_char: char = 'a';
+    println!("{}", new_char);
+}
