@@ -43,3 +43,18 @@ fn test_check_variable() {
     piece of code above will give you only warning: "variable does not need to be mutable"
     but it succeeds when running unit tests */
 }
+
+#[test]
+fn test_shadowing() {
+    let id = "abc12345";
+    println!("{}", id);
+
+    let id = 12345;
+    println!("{}", id);
+
+/*  12345 will be the latest value and abc12345 will be closed */
+    println!("{}", id);
+
+/*  rust allows users to use shadowing variable but it is not a good practice
+    and causing confusion */
+}
