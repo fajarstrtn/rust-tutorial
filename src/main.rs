@@ -127,8 +127,10 @@ fn test_define_bool() {
 
 #[test]
 fn test_define_char() {
+/*  defining char data type is the same as the other languages
+    by using single-quote character*/
     let new_char: char = 'a';
-    println!("{}", new_char);
+    println!("this is \'{}\' character", new_char);
 }
 
 #[test]
