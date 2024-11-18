@@ -148,3 +148,20 @@ fn test_copy_variable() {
     println!("a is {}", a);
     println!("b is {}", b);
 }
+
+#[test]
+fn test_convert_integer_using_as() {
+    let a: i8 = 100;
+    let b: i16 = a as i16;
+    let c: i32 = a as i32;
+
+    println!("{}", a);
+    println!("{}", b);
+    println!("{}", c);
+
+    let d: i32 = 1000000128;
+    let e: i8 = d as i8;
+
+    println!("{}", d);
+    println!("{}", e);
+}
