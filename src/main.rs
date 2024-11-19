@@ -172,6 +172,7 @@ fn test_convert_integer_using_as() {
 fn test_define_tuple() {
     let tuple: (i8, bool, char) = (8, true, 'x');
 
+/*  accessing tuple value by using .index */
     println!("1st index is {}", tuple.0);
     println!("2nd index is {}", tuple.1);
     println!("3rd index is {}", tuple.2);
@@ -245,6 +246,7 @@ fn test_array() {
     let arr: [i32; 5] = [1, 2, 3, 4, 5];
     println!("array value is {:?}", arr);
 
+/*  accessing array value by using [index] */
     println!("index 0 is {}", arr[0]);
     println!("index 1 is {}", arr[1]);
     println!("index 2 is {}", arr[2]);
