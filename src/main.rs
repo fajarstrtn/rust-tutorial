@@ -341,3 +341,10 @@ fn test_variable_scope() {
 /*  println!("oh wait... yes! he was really born in {}", place_of_birth);
     will cause an error that the variable is out of scope where it is declared. */
 }
+
+#[test]
+fn test_outer_scope() {
+/*  println!("{}", pet_name); will cause an error: "cannot find value 'pet_name' in this scope". */
+    let occupation: &str = "accountant";
+    println!("i am working as an {}", occupation);
+}
