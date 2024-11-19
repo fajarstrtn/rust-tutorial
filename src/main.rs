@@ -14,6 +14,11 @@ fn test_create_variable() {
     let name = "john doe";
 /*  name = "jack napalm"; will cause an error: "cannot assign twice to immutable variable 'name'". */
     println!("my name is {}", name);
+
+/*  rust allows user to declare variable first, then initialized. */
+    let city: &str;
+    city = "jakarta";
+    println!("{} lives in {}", name, city);
 }
 
 #[test]
