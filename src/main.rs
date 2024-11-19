@@ -285,6 +285,7 @@ fn test_mutable_array() {
     array[0] = 100;
 
     println!("{:?}", array);
+    println!("{:?}", array[2]);
 }
 
 /*  declaring const in rust, user simply adds 'const'.
@@ -306,4 +307,9 @@ fn test_define_const() {
 /*  PI = 39.10; will cause an error: "invalid left-hand side of assignment",
     since const is immutable. */
     println!("pi is {}", PI);
+}
+
+#[test]
+fn test_variable_scope() {
+
 }
