@@ -24,7 +24,7 @@ fn test_create_mutable_variable() {
     ever since variables in rust are immutable.
 
     to explicitely reassign value to the x variable,
-    we simply add 'mut' after let reserved word. */
+    user can simply add 'mut' after let reserved word. */
 
     println!("x is {}", x);
     x = 100;
@@ -40,7 +40,7 @@ fn test_check_variable() {
 /*  let mut occupation = "software engineer";
     println!("his job is a {}", occupation);
 
-    piece of code above will give you only warning: "variable does not need to be mutable"
+    piece of codes above will give user only warning: "variable does not need to be mutable"
     but it succeeds when running unit tests. */
 }
 
@@ -280,4 +280,24 @@ fn test_mutable_array() {
     array[0] = 100;
 
     println!("{:?}", array);
+}
+
+/*  declaring const in rust, user simply adds 'const'.
+    const cannot be declared using 'mut' because of the immutability by default.
+    it should be declared in compiled-time and declared the data type explicitly.
+    naming convention in const generally uses SCREAM_SNAKE_CASE.
+    
+    as it's a global const variable, every function inside of main.rs can invoke this. */
+const MAXIMUM_I32: i32 = i32::MAX;
+
+#[test]
+fn test_define_const() {
+    const MINIMUM_I32: i32 = i32::MIN;
+    println!("maximum range for i32 is {}", MAXIMUM_I32);
+    println!("minimum range for i32 is {}", MINIMUM_I32);
+
+    const PI: f64 = 3.141592653589793238462643383279502884197;
+/*  PI = 39.10; will cause an error: "invalid left-hand side of assignment",
+    since const is immutable. */
+    println!("pi is {}", PI);
 }
