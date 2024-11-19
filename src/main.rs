@@ -181,7 +181,7 @@ fn test_define_tuple() {
 
 /*  this is part of destructuring tuple */
     let (a, b, c) = another_tuple;
-    
+
     println!("{:?}", another_tuple);
     println!("{} {} {}", a, b ,c);
 }
@@ -238,4 +238,16 @@ fn test_boolean_operator() {
 
     let is_remedial_test_eligible: bool = !am_i_passed;
     println!("should i take the remedial test? {}", is_remedial_test_eligible);
+}
+
+#[test]
+fn test_array() {
+    let arr: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("array value is {:?}", arr);
+
+    println!("index 0 is {}", arr[0]);
+    println!("index 1 is {}", arr[1]);
+    println!("index 2 is {}", arr[2]);
+    println!("index 3 is {}", arr[3]);
+    println!("index 4 is {}", arr[4]);
 }
