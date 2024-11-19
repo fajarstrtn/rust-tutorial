@@ -275,6 +275,9 @@ fn test_array() {
 }
 
 #[test]
-fn test_mutable_tuple() {
+fn test_mutable_array() {
+    let mut array: [u8; 5] = [0, 1, 2, 4, 90];
+    array[0] = 100;
 
+    println!("{:?}", array);
 }
