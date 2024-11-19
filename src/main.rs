@@ -185,6 +185,10 @@ fn test_define_tuple() {
 
     println!("{:?}", another_tuple);
     println!("{} {} {}", a, b ,c);
+
+/*  skip the value by using _ */
+    let (d, e, _) = another_tuple;
+    println!("{} {}", d, e);
 }
 
 #[test]
