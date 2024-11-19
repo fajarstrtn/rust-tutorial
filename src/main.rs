@@ -170,12 +170,20 @@ fn test_convert_integer_using_as() {
 
 #[test]
 fn test_define_tuple() {
-    let tpl: (i8, bool, char) = (8, true, 'x');
-    println!("1st index is {}", tpl.0);
-    println!("2nd index is {}", tpl.1);
-    println!("3rd index is {}", tpl.2);
+    let tuple: (i8, bool, char) = (8, true, 'x');
 
-    println!("the tuple values are {:?}", tpl);
+    println!("1st index is {}", tuple.0);
+    println!("2nd index is {}", tuple.1);
+    println!("3rd index is {}", tuple.2);
+    println!("the tuple values are {:?}", tuple);
+
+    let another_tuple: (i32, f64, bool) = (10000, 90.98079, false);
+
+/*  this is part of destructuring tuple */
+    let (a, b, c) = another_tuple;
+    
+    println!("{:?}", another_tuple);
+    println!("{} {} {}", a, b ,c);
 }
 
 #[test]
