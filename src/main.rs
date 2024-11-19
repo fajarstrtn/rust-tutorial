@@ -12,7 +12,7 @@ fn test_say_hi() {
 #[test]
 fn test_create_variable() {
     let name = "john doe";
-/*  name = "jack napalm"; will cause an error: "cannot assign twice to immutable variable 'name'" */
+/*  name = "jack napalm"; will cause an error: "cannot assign twice to immutable variable 'name'". */
     println!("my name is {}", name);
 }
 
@@ -34,14 +34,14 @@ fn test_create_mutable_variable() {
 #[test]
 fn test_check_variable() {
     let name = "john doe";
-/*  name = 10; will cause an error: "mismatched types" */
+/*  name = 10; will cause an error: "mismatched types". */
     println!("this is {}", name);
 
-    /* let mut occupation = "software engineer";
+/*  let mut occupation = "software engineer";
     println!("his job is a {}", occupation);
 
     piece of code above will give you only warning: "variable does not need to be mutable"
-    but it succeeds when running unit tests */
+    but it succeeds when running unit tests. */
 }
 
 #[test]
@@ -52,17 +52,17 @@ fn test_shadowing() {
     let id = 12345;
     println!("{}", id);
 
-/*  12345 will be the latest value and abc12345 will be closed */
+/*  12345 will be the latest value and abc12345 will be closed. */
     println!("{}", id);
 
 /*  rust allows users to use shadowing variable but it is not a good practice
-    and causing confusion */
+    and causing confusion. */
 }
 
 #[test]
 fn test_print_format() {
     let name = "john doe";
-/*  println!(name); will cause an error: "format argument must be a string literal" */
+/*  println!(name); will cause an error: "format argument must be a string literal". */
     println!("{}", name);
 }
 
@@ -79,7 +79,7 @@ fn test_define_integer() {
     println!("i8_min is {}", i8_min);
     println!("i8_max is {}", i8_max);
 
-/*  rust will automatically detect for integer (i32) */
+/*  rust will automatically detect for integer (i32). */
     let x: i32 = 100;
     let y = 100;
 
@@ -87,13 +87,13 @@ fn test_define_integer() {
     println!("y is {}", y);
 
 /*  below statements will cause an error: "attempt to add with overflow"
-    because rust prevents it from overflow
+    because rust prevents it from overflow.
 
     let mut x = i32::MAX;
     x = x + 1;
     println!("x is {}", x); */
 
-    /* below statements also will cause an error: "attempt to subtract with overflow"
+/*  below statements also will cause an error: "attempt to subtract with overflow".
 
     let mut y = i32::MIN;
     y -= 1;
@@ -108,7 +108,7 @@ fn test_define_float() {
     let pi: f64 = 3.141592653589793238462643383279502884197;
     println!("{}", pi);
 
-/*  rust will automatically detect for float (f64) */
+/*  rust will automatically detect for float (f64). */
     let x: f64 = 9.18279172912;
     let y = 10.21982912;
 
@@ -128,7 +128,7 @@ fn test_define_bool() {
 #[test]
 fn test_define_char() {
 /*  defining char data type is the same as the other languages
-    by using single-quote character*/
+    by using single-quote character. */
     let new_char: char = 'a';
     println!("this is \'{}\' character", new_char);
 }
@@ -172,7 +172,7 @@ fn test_convert_integer_using_as() {
 fn test_define_tuple() {
     let tuple: (i8, bool, char) = (8, true, 'x');
 
-/*  accessing tuple value by using .index */
+/*  accessing tuple value by using tuple.index, e.g: tuple.0. */
     println!("1st index is {}", tuple.0);
     println!("2nd index is {}", tuple.1);
     println!("3rd index is {}", tuple.2);
@@ -180,15 +180,22 @@ fn test_define_tuple() {
 
     let another_tuple: (i32, f64, bool) = (10000, 90.98079, false);
 
-/*  this is part of destructuring tuple */
+/*  this is part of destructuring tuple. */
     let (a, b, c) = another_tuple;
 
     println!("{:?}", another_tuple);
     println!("{} {} {}", a, b ,c);
 
-/*  skip the value by using _ */
+/*  skip the value by using _ (underscore). */
     let (d, e, _) = another_tuple;
     println!("{} {}", d, e);
+
+/*  every variable declares in rust is immutable by default.
+    to make the variable becomes mutable, use 'mut'. */
+    let mut yet_stil_another_tuple: (bool, char, f64) = (false, 'a', 10.9998);
+    yet_stil_another_tuple.0 = true;
+
+    println!("{:?}", yet_stil_another_tuple);
 }
 
 #[test]
@@ -220,8 +227,8 @@ fn test_comparison_operator() {
     let a: u16 = 60000;
     let b: i16 = 32000;
 
-/*  println!("is a bigger than b? {}", a > b); will cause an error: mismatched types, expected 'u16'
-    found 'i16; */
+/*  println!("is a bigger than b? {}", a > b); will cause an error: "mismatched types, expected 'u16'
+    found 'i16'". */
 
     let c: u16 = b as u16;
     
@@ -250,14 +257,14 @@ fn test_array() {
     let arr: [i32; 5] = [1, 2, 3, 4, 5];
     println!("array value is {:?}", arr);
 
-/*  accessing array value by using [index] */
+/*  accessing array value by using [index], e.g: arr[0]. */
     println!("index 0 is {}", arr[0]);
     println!("index 1 is {}", arr[1]);
     println!("index 2 is {}", arr[2]);
     println!("index 3 is {}", arr[3]);
     println!("index 4 is {}", arr[4]);
 
-/*  defining multi-dimensional array with [[type; column]; row] */
+/*  defining multi-dimensional array with [[type; column]; row], e.g: [[i32; 4]; 2]. */
     let arr_2: [[i32; 4]; 2] = [
         [1, 2, 5, 11],
         [3, 4, 5, 9]
@@ -265,4 +272,9 @@ fn test_array() {
 
     println!("{:?}", arr_2);
     println!("row 1 and column 3: {}", arr_2[0][2]);
+}
+
+#[test]
+fn test_mutable_tuple() {
+
 }
