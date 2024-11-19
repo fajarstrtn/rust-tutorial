@@ -256,4 +256,13 @@ fn test_array() {
     println!("index 2 is {}", arr[2]);
     println!("index 3 is {}", arr[3]);
     println!("index 4 is {}", arr[4]);
+
+/*  defining multi-dimensional array with [[type; column]; row] */
+    let arr_2: [[i32; 4]; 2] = [
+        [1, 2, 5, 11],
+        [3, 4, 5, 9]
+    ];
+
+    println!("{:?}", arr_2);
+    println!("row 1 and column 3: {}", arr_2[0][2]);
 }
