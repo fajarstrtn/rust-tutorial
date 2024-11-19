@@ -311,5 +311,33 @@ fn test_define_const() {
 
 #[test]
 fn test_variable_scope() {
+/*  pet_name is declared in function scope. */
+    let pet_name: &str = "marble";
 
+    {
+/*      place_of_birth is also declared inside of the inner scope.
+        its scope is accessible only inside of this scope
+        and its inner scope. */
+        let place_of_birth: &str = "jakarta";
+
+        {
+/*          but pet_name can be accessible where it is declared
+            and inside of the inner scope. */
+            println!("my pet name is {}", pet_name);
+        }
+
+        println!("i hardly remember that he was born in {}", place_of_birth);
+    }
+    
+/*  when the program hits the outer of the scope, place_of_birth will pop up
+    from the memory and rust automatically frees them.
+    
+    that's why when user invokes place_of_birth out of its scope,
+    it causes an error.
+    
+    whereas, pet_name is still accessible in the function scope until program ends. */
+    println!("repeat! my pet name is still {}", pet_name);
+
+/*  println!("oh wait... yes! he was really born in {}", place_of_birth);
+    will cause an error that the variable is out of scope where it is declared. */
 }
