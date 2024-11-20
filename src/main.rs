@@ -406,3 +406,12 @@ fn test_overflow() {
     b = f64::MAX + 1.0;
     println!("float max plus one is {}", b);
 }
+
+#[test]
+fn isize_and_usize() {
+    let a: isize = -100;
+    let b: usize = 100;
+
+    println!("signed value is {}", a);
+    println!("unsigned value is {}", b);
+}
