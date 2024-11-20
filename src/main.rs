@@ -428,8 +428,8 @@ fn test_overflow() {
     let mut b = 10.5;
     println!("float value is {}", b);
     
-/*  a = 2147483647 + 1; is error at compile-time and will cause an overflow. */
-    println!("integer max plus one is {}", a);
+/*  a = 2147483647 + 1; is error at compile-time and will cause an overflow.
+    println!("integer max plus one is {}", a); */
 
 /*  b = f64::MAX + 1; will cause an error: "cannot add '{integer}' to 'f64'".
     consider using a floating-point literal by writing it with '.0'.
