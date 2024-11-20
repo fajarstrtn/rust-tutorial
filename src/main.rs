@@ -385,3 +385,24 @@ fn call_second_stack() {
     let str: String = String::from("world");
     println!("{} and {}", num, str);
 }
+
+#[test]
+fn test_overflow() {
+/*  for integer, rust will set i32 for integer type by default. */
+    let a = 99;
+    println!("integer value is {}", a);
+
+/*  for float, rust will set f64 for float type by default. */
+    let mut b = 10.5;
+    println!("float value is {}", b);
+    
+/*  a = 2147483647 + 1; is error at compile-time and will cause an overflow. */
+    println!("integer max plus one is {}", a);
+
+/*  b = f64::MAX + 1; will cause an error: "cannot add '{integer}' to 'f64'".
+    consider using a floating-point literal by writing it with '.0'.
+    
+    b = f64::MAX + 1.0; is not error at runtime but will cause an overflow. */
+    b = f64::MAX + 1.0;
+    println!("float max plus one is {}", b);
+}
