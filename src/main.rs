@@ -366,7 +366,7 @@ fn test_shadowing_scope() {
 }
 
 #[test]
-fn stack_and_heap_memory() {
+fn test_stack_and_heap_memory() {
     call_first_stack();
     call_second_stack();
 }
