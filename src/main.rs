@@ -294,7 +294,7 @@ fn test_mutable_array() {
     naming convention in const generally uses SCREAM_SNAKE_CASE.
     
     as it's a global const variable, every function inside of main.rs can invoke this. */
-#[allow(dead_code)]
+#[allow(unused)]
 const MAXIMUM_I32: i32 = i32::MAX;
 
 #[test]
