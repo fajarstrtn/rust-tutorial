@@ -145,6 +145,17 @@ fn test_define_string() {
 
     let city: &str = "jakarta";
     println!("i lived in {}", city);
+
+/*  here in the example, creator uses shadowing variable
+    but this is practically not good, causes confusion. */
+    let name: &str = "jhonny cage";
+    println!("his name is {}", name);
+
+/*  string literals are static by default.
+    this means that string literals are guaranteed to be valid
+    for the duration of the entire program. */
+    let city: &'static str = "london";
+    println!("he lived in {}", city);
 }
 
 #[test]
