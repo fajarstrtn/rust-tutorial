@@ -139,7 +139,7 @@ fn test_define_char() {
 }
 
 #[test]
-fn test_define_string() {
+fn test_define_string_literals() {
     let name = "jack morris";
     println!("my name is {}", name);
 
