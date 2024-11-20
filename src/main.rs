@@ -364,3 +364,24 @@ fn test_shadowing_scope() {
     println!("i was born in {}", nation);
     println!("now i am {} years-old", age);
 }
+
+#[test]
+fn stack_and_heap_memory() {
+    call_first_stack();
+    call_second_stack();
+}
+
+#[allow(unused)]
+fn call_first_stack() {
+    let num: i8 = 99;
+    let str: String = String::from("hello");
+
+    println!("{} and {}", num, str);
+}
+
+#[allow(unused)]
+fn call_second_stack() {
+    let num: i8 = 99;
+    let str: String = String::from("world");
+    println!("{} and {}", num, str);
+}
