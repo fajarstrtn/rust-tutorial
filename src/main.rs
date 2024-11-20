@@ -405,6 +405,9 @@ fn test_overflow() {
     b = f64::MAX + 1.0; is not error at runtime but will cause an overflow. */
     b = f64::MAX + 1.0;
     println!("float max plus one is {}", b);
+
+/*  let c: i8 = 256; will cause an error: "literal value out of range for 'i8'".
+    println!("integer value is {}", c); */
 }
 
 #[test]
