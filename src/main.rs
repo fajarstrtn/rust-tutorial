@@ -348,3 +348,19 @@ fn test_outer_scope() {
     let occupation: &str = "accountant";
     println!("i am working as an {}", occupation);
 }
+
+#[test]
+fn test_shadowing_scope() {
+    let nation: &str = "england";
+    let age: i8 = 17;
+
+    {
+        let nation: &str = "germany";
+        let age: i8 = age - 5;
+        println!("i lived in {}", nation);
+        println!("i am {} years-old", age);
+    }
+
+    println!("i was born in {}", nation);
+    println!("now i am {} years-old", age);
+}
