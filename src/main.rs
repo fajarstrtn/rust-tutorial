@@ -159,6 +159,13 @@ fn test_define_string_literals() {
 }
 
 #[test]
+fn define_string_objects() {
+    let mut name: String = String::new();
+    name.push_str("hello world");
+    println!("say: \"{}\"", name);
+}
+
+#[test]
 fn test_copy_variable() {
     let a: i8 = 10;
     let b: i8 = a;
@@ -224,6 +231,20 @@ fn test_operator() {
     println!("{}", a / b);
     println!("{}", a * b);
     println!("{}", a % b);
+
+/*  in rust, user cannot divide integer by float, vice versa.
+    e.g:
+    let c = 100.0;
+    let d = 10;
+    println!("{} is divided by {} equals {}", c, d, (c/d)); */
+
+    let c = 10;
+    let d = 10;
+    println!("{} is divided by {} equals {}", c, d, (c/d));
+
+    let e = 10.0;
+    let f = 5.4;
+    println!("{} is divided by {} equals {}", e, f, (e/f));
 }
 
 #[test]
